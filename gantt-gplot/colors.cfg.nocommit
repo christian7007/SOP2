@@ -1,0 +1,5 @@
+[Colors]
+wait: "#CCCCCC"
+run: "#0000FF"
+io: "#FFFF00"
+idle: "#00FF00"
