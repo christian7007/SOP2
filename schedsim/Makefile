@@ -1,14 +1,14 @@
 #!/usr/bin/make
 TARGET=schedsim
-SOURCES=main.c sched.c slist.c barrier.c  sched_rr.c sched_sjf.c  sched_fcfs.c
+SOURCES=main.c sched.c slist.c barrier.c  sched_rr.c sched_sjf.c  sched_fcfs.c sched_prio.c
 
 OBJECTS=$(patsubst %.c,%.o,$(SOURCES))
 MY_INCLUDES=.
 HEADERS=$(wildcard $(MY_INCLUDES)/*.h)
 OS=$(shell uname)
 LDFLAGS=-lpthread
-#CFLAGS=-g -Wall 
-CFLAGS=-g -Wall -DPOSIX_BARRIER
+CFLAGS=-g -Wall 
+#CFLAGS=-g -Wall -DPOSIX_BARRIER
 
 all: $(TARGET)
 	
